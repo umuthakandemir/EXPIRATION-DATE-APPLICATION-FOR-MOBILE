@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logoskt"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logoskt"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SKTTakip"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.productInfoAct"
+            android:exported="false" />
+        <activity
+            android:name=".view.updateProductAct"
+            android:exported="false" />
+
+        <meta-data
+            android:name="onesignal_app_id"
+            android:value="da2f6ad5-4dd2-4625-a80c-653b98e22695" />
+        <meta-data
+            android:name="onesignal_google_project_number"
+            android:value="73119252840" />
+
+        <activity
+            android:name=".view.checkProduct"
+            android:exported="false" />
+        <activity
+            android:name=".view.addNoteDetails"
+            android:exported="false" />
+        <activity
+            android:name=".view.BarcodeScanAct"
+            android:exported="false" />
+        <activity
+            android:name=".view.addNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.addProduct"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

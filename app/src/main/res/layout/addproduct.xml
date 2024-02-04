@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.addProduct">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="526dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/ProductName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:autofillHints="name"
+                android:background="@drawable/textboxshape"
+                android:hint="Enter Product Name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scanbarcodebutton"
+                android:layout_margin="10dp"
+                />
+            <EditText
+                android:id="@+id/barcodeTextView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:background="@drawable/textboxshape"
+                android:hint="Enter Product Barcode No."
+                app:layout_constraintBottom_toTopOf="@+id/ProductName"
+                app:layout_constraintStart_toEndOf="@+id/scanbarcodebutton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImage"
+                android:layout_margin="10dp"
+                />
+            <ImageButton
+                android:id="@+id/scanbarcodebutton"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:backgroundTint="#00ffffff"
+                android:src="@drawable/barcode"
+                android:scaleType="fitXY"
+                android:layout_margin="10dp"
+                android:onClick="ScanBarcode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImage"/>
+            <EditText
+                android:id="@+id/SKTDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Enter SKT Date"
+                android:background="@drawable/textboxshape"
+                app:layout_constraintTop_toBottomOf="@+id/ProductName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="10dp"
+                />
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="200dp"
+                android:layout_marginTop="75dp"
+                android:layout_height="200dp"
+                android:src="@drawable/addphoto"
+                android:onClick="AddProductImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="10dp"/>
+
+            <ImageButton
+                android:id="@+id/saveProduct"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:backgroundTint="#00ffffff "
+                android:onClick="SaveProduct"
+                android:paddingEnd="2dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/save"
+                app:layout_constraintStart_toStartOf="@+id/productnote"
+                app:layout_constraintEnd_toEndOf="@+id/productnote"
+                app:layout_constraintTop_toBottomOf="@+id/productnote"
+                android:layout_margin="10dp"
+
+                />
+
+            <EditText
+                android:id="@+id/productnote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="124dp"
+                android:background="@drawable/textboxshape"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Enter note for  this product"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SKTDate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

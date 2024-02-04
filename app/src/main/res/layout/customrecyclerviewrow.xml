@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_margin="10dp"
+            android:layout_height="100dp"
+            android:id="@+id/productImageviewNotification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/logoskt"
+            android:scaleType="fitXY" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/bildirimContemtyetxt"
+            android:text="@string/app_name"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@+id/productImageviewNotification"
+            app:layout_constraintTop_toTopOf="@+id/productImageviewNotification"
+
+            android:textSize="17sp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notificationButtn"
+        android:text="TIKLA"
+        android:shadowRadius="@integer/material_motion_duration_medium_1"
+        android:layout_margin="10dp"
+        android:background="@drawable/textboxshape"/>
+
+</LinearLayout>
